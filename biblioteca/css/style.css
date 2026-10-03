@@ -1,0 +1,826 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff5f8;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #ec4899, #be185d);
+    color: white;
+
+    padding: 35px 50px 28px;
+
+    border-radius: 0 0 20px 20px;
+
+    box-shadow: 0 8px 25px rgba(190, 24, 93, 0.20);
+}
+
+header h1 {
+    color: white;
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+nav {
+    display: flex;
+    gap: 12px;
+}
+
+nav a {
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    color: white;
+    text-decoration: none;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    transition: 0.25s;
+}
+
+nav a:hover {
+    background: white;
+    color: #be185d;
+
+    transform: translateY(-2px);
+}
+
+.container {
+    width: 78%;
+    max-width: 1100px;
+
+    margin: 42px auto;
+}
+
+.container h2 {
+    color: #9d174d;
+    font-size: 28px;
+
+    margin-bottom: 18px;
+}
+
+.container > p {
+    color: #555;
+
+    font-size: 16px;
+
+    margin-bottom: 25px;
+}
+
+.card {
+    background: white;
+
+    width: 100%;
+
+    min-height: 190px;
+
+    padding: 28px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid #f8bfd5;
+
+    border-radius: 17px;
+
+    box-shadow: 0 6px 20px rgba(190, 24, 93, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(190, 24, 93, 0.13);
+}
+
+.card h3 {
+    color: #be185d;
+
+    font-size: 21px;
+
+    margin: 5px 0 8px;
+}
+
+.card p {
+    color: #555;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+}
+
+.card .icone {
+    font-size: 28px;
+
+    margin-bottom: 5px;
+}
+
+.card a,
+.btn {
+    display: inline-block;
+
+    background: linear-gradient(
+        135deg,
+        #ec4899,
+        #db2777
+    );
+
+    color: white !important;
+
+    text-decoration: none;
+
+    padding: 12px 24px;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    margin-top: auto;
+
+    box-shadow:
+        0 5px 12px rgba(219, 39, 119, 0.20);
+
+    transition: 0.25s;
+}
+
+.card a:hover,
+.btn:hover {
+    background: linear-gradient(
+        135deg,
+        #db2777,
+        #be185d
+    );
+
+    transform: translateY(-2px);
+}
+
+form {
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 15px;
+
+    border: 1px solid #f8bfd5;
+
+    box-shadow: 0 5px 20px rgba(190, 24, 93, 0.08);
+}
+
+label {
+    display: block;
+
+    color: #831843;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #f3b4cc;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #fffafd;
+
+    font-size: 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #ec4899;
+
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.12);
+}
+
+button {
+    border: none;
+
+    background: #db2777;
+
+    color: white;
+
+    padding: 12px 24px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(190, 24, 93, 0.08);
+}
+
+th {
+    background: #db2777;
+
+    color: white;
+
+    padding: 15px;
+
+    text-align: left;
+}
+
+td {
+    padding: 14px;
+
+    border-bottom: 1px solid #fce7f3;
+}
+
+tr:hover td {
+    background: #fff5f9;
+}
+
+footer {
+    background: #9d174d;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 22px;
+
+    margin-top: 50px;
+
+    border-radius: 18px 18px 0 0;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 25px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .card {
+        padding: 22px;
+    }
+}
+
+.login-container {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        135deg,
+        #fff1f7 0%,
+        #ffe1ed 50%,
+        #ffd2e5 100%
+    );
+}
+
+.login-box {
+    width: 100%;
+    max-width: 420px;
+
+    background: #ffffff;
+
+    padding: 40px;
+
+    border-radius: 24px;
+
+    border: 1px solid #f7b5cf;
+
+    box-shadow:
+        0 20px 50px rgba(190, 24, 93, 0.15);
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+.login-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #ec4899,
+        #db2777
+    );
+
+    font-size: 32px;
+
+    box-shadow:
+        0 10px 25px rgba(219, 39, 119, 0.25);
+}
+
+.login-box h1 {
+    margin: 0;
+
+    color: #be185d;
+
+    font-size: 30px;
+
+    font-weight: 700;
+}
+
+.login-subtitle {
+    margin: 8px 0 28px;
+
+    color: #9f7b89;
+
+    font-size: 14px;
+}
+
+.login-box form {
+    width: 100%;
+
+    text-align: left;
+}
+
+.login-box label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    margin-top: 16px;
+
+    color: #831843;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.login-box input {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #f3bfd2;
+
+    border-radius: 10px;
+
+    background: #fffafa;
+
+    color: #4a2635;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.login-box input:focus {
+    border-color: #ec4899;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(236, 72, 153, 0.12);
+}
+
+.login-box input::placeholder {
+    color: #c4a4b1;
+}
+
+.login-box button {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: linear-gradient(
+        135deg,
+        #ec4899,
+        #db2777
+    );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    box-shadow:
+        0 8px 18px rgba(219, 39, 119, 0.25);
+}
+
+.login-box button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(219, 39, 119, 0.35);
+}
+
+.login-box button:active {
+    transform: translateY(0);
+}
+
+.login-box .error {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    margin-bottom: 18px;
+
+    border-radius: 10px;
+
+    background: #fff1f2;
+
+    border: 1px solid #fecdd3;
+
+    color: #be123c;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+.login-register {
+    margin-top: 25px;
+
+    color: #9f7b89;
+
+    font-size: 14px;
+}
+
+.login-register a {
+    color: #db2777;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+
+.login-register a:hover {
+    color: #be185d;
+
+    text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+
+    .login-container {
+        padding: 20px 15px;
+    }
+
+    .login-box {
+        padding: 30px 22px;
+
+        border-radius: 20px;
+    }
+
+    .login-box h1 {
+        font-size: 26px;
+    }
+
+}
+
+header {
+    position: relative;
+}
+
+.perfil {
+    position: absolute !important;
+
+    top: 25px !important;
+    right: 35px !important;
+
+    z-index: 9999 !important;
+
+    display: block !important;
+}
+
+.perfil-botao,
+.perfil > button {
+    width: 52px !important;
+    height: 52px !important;
+
+    min-width: 52px !important;
+    min-height: 52px !important;
+
+    max-width: 52px !important;
+    max-height: 52px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border: none !important;
+    border-radius: 50% !important;
+
+    outline: none !important;
+
+    background: #ffffff !important;
+
+    color: #be185d !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+
+    line-height: 1 !important;
+
+    cursor: pointer !important;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.20) !important;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease !important;
+}
+
+.perfil-botao:hover,
+.perfil > button:hover {
+    transform: scale(1.08) !important;
+
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.25) !important;
+}
+
+.perfil-inicial,
+.perfil-botao .perfil-inicial,
+.perfil > button .perfil-inicial {
+    width: 52px !important;
+    height: 52px !important;
+
+    min-width: 52px !important;
+    min-height: 52px !important;
+
+    border-radius: 50% !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: #ffffff !important;
+
+    color: #be185d !important;
+
+    font-family: Arial, Helvetica, sans-serif !important;
+
+    font-size: 20px !important;
+
+    font-weight: bold !important;
+
+    line-height: 1 !important;
+
+    box-sizing: border-box !important;
+}
+
+.perfil-menu {
+    position: absolute !important;
+
+    top: 62px !important;
+    right: 0 !important;
+
+    width: 240px !important;
+
+    padding: 12px !important;
+
+    background: #ffffff !important;
+
+    border-radius: 12px !important;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.20) !important;
+
+    z-index: 10000 !important;
+
+    display: none !important;
+
+    box-sizing: border-box !important;
+}
+
+.perfil-menu.ativo {
+    display: block !important;
+}
+
+.perfil-info {
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 10px !important;
+
+    padding: 8px !important;
+
+    margin: 0 !important;
+}
+
+.perfil-info strong {
+    display: block !important;
+
+    color: #333333 !important;
+
+    font-size: 15px !important;
+
+    font-weight: bold !important;
+}
+
+.perfil-info span {
+    display: block !important;
+
+    color: #777777 !important;
+
+    font-size: 13px !important;
+
+    margin-top: 3px !important;
+}
+
+.perfil-inicial-grande {
+    width: 42px !important;
+    height: 42px !important;
+
+    min-width: 42px !important;
+    min-height: 42px !important;
+
+    border-radius: 50% !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #ec4899 !important;
+
+    color: #ffffff !important;
+
+    font-size: 17px !important;
+
+    font-weight: bold !important;
+
+    line-height: 1 !important;
+}
+
+.perfil-linha {
+    width: 100% !important;
+
+    height: 1px !important;
+
+    background: #eeeeee !important;
+
+    margin: 8px 0 !important;
+}
+
+.perfil-menu a {
+    display: block !important;
+
+    width: 100% !important;
+
+    padding: 10px !important;
+
+    margin: 2px 0 !important;
+
+    border-radius: 8px !important;
+
+    color: #333333 !important;
+
+    background: transparent !important;
+
+    text-decoration: none !important;
+
+    font-size: 14px !important;
+
+    font-weight: normal !important;
+
+    box-shadow: none !important;
+
+    transform: none !important;
+
+    box-sizing: border-box !important;
+
+    transition: 0.2s ease !important;
+}
+
+.perfil-menu a:hover {
+    background: #fff1f7 !important;
+
+    color: #be185d !important;
+
+    transform: none !important;
+}
+
+@media (max-width: 768px) {
+
+    .perfil {
+        top: 20px !important;
+
+        right: 20px !important;
+    }
+
+    .perfil-botao,
+    .perfil > button {
+        width: 46px !important;
+        height: 46px !important;
+
+        min-width: 46px !important;
+        min-height: 46px !important;
+
+        max-width: 46px !important;
+        max-height: 46px !important;
+    }
+
+    .perfil-inicial,
+    .perfil-botao .perfil-inicial,
+    .perfil > button .perfil-inicial {
+        width: 46px !important;
+        height: 46px !important;
+
+        min-width: 46px !important;
+        min-height: 46px !important;
+    }
+
+    .perfil-menu {
+        width: 220px !important;
+    }
+}
